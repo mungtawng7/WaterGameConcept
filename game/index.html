@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Well Walk</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <div id="game-container">
+      <canvas id="game-canvas" width="960" height="540"></canvas>
+    </div>
+    <section class="camera-controls" aria-label="Shooter face photo">
+      <fieldset class="face-part-picker">
+        <legend>Use</legend>
+        <label><input type="radio" name="face-part" value="face" checked /> Whole face</label>
+        <label><input type="radio" name="face-part" value="eyes" /> Eyes</label>
+        <label><input type="radio" name="face-part" value="mouth" /> Mouth</label>
+      </fieldset>
+      <button id="face-capture" type="button">Take face photo</button>
+      <div class="camera-copy">
+        <strong>Shooter photo</strong>
+        <span id="camera-status" role="status" aria-live="polite">Choose a face part, then take a photo for your shooter.</span>
+      </div>
+      <video id="camera-preview" autoplay playsinline muted hidden></video>
+      <img id="face-photo-preview" alt="Your photo on the shooter" hidden />
+    </section>
+    <p class="control-hint">Use ← → to move. Hold Space to fire both water guns.</p>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
